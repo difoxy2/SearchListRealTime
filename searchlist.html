@@ -62,41 +62,32 @@
     <th style="width:60%;">Name</th>
     <th style="width:40%;">Country</th>
   </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbkop</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Koniglich Essen</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Italy</td>
-  </tr>
-  <tr>
-    <td>North/South</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Paris specialites</td>
-    <td>France</td>
-  </tr>
+  
 </table>
 
+<textarea id="excelpaste"></textarea>
+<button onclick="addRow()">Expend List</button>
+    
 <script>
+    
+    
+function addRow() {
+  var array = document.getElementById("excelpaste").value.split(/\s+|\n+/g);
+    console.log(array);
+  
+  for (var i=0; i<array.length/2; i=i+2){
+          var table = document.getElementById("myTable");
+          var row = table.insertRow(-1);
+          var cell1 = row.insertCell(0);
+          var cell2 = row.insertCell(1);
+          cell1.innerHTML = array[2*i];
+          cell2.innerHTML = array[2*i+1];
+  }
+  
+}    
+    
+
+    
 function myFunction() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
