@@ -59,8 +59,8 @@
 
 <table id="myTable">
   <tr class="header">
-    <th style="width:60%;">Name</th>
-    <th style="width:40%;">Country</th>
+    <th style="width:60%;">Rule Code</th>
+    <th style="width:40%;">Prog.</th>
   </tr>
   
 </table>
@@ -75,7 +75,7 @@ function addRow() {
   var array = document.getElementById("excelpaste").value.split(/\s+|\n+/g);
     console.log(array);
   
-  for (var i=0; i<array.length/2; i=i+2){
+  for (var i=0; i<array.length/2; i++){
           var table = document.getElementById("myTable");
           var row = table.insertRow(-1);
           var cell1 = row.insertCell(0);
