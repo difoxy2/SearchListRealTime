@@ -72,6 +72,10 @@
     
     
 function addRow() {
+  
+  document.getElementById("myTable").innerHTML='<tr class="header"><th style="width:60%;">Rule Code</th><th style="width:40%;">Prog.</th></tr>';
+  
+  
   var array = document.getElementById("excelpaste").value.split(/\s+|\n+/g);
     console.log(array);
   
